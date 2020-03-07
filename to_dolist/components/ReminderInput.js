@@ -41,15 +41,20 @@ const ReminderInput = props => {
 const styles = StyleSheet.create({
     input_style: {
         flex: 1,
-        justifyContent: 'center', 
-        alignItems: 'center'
+       
+       
+       justifyContent: 'center',
+       alignItems: 'center',
+       backgroundColor: '#ccc',
+ 
       },
       TextInput:{
         width: '80%',
         borderColor: 'black', 
         borderWidth: 1, 
         padding: 10,
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: 'white'
       },
       cancelButton: {
         marginLeft: 288,
@@ -58,6 +63,7 @@ const styles = StyleSheet.create({
       },
       buttonSize:{
           width: '40%',
+          backgroundColor: '#ccc'
          
       }
         

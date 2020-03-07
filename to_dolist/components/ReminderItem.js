@@ -5,7 +5,7 @@ const ReminderItem = props => {
     return(
         <TouchableOpacity onPress={props.onDelete.bind(this, props.id)}> 
         <View style={styles.ReminderList}>
-             <Text>{props.title}</Text>
+             <Text style={styles.textLayout}>{props.title}</Text>
            </View>
            </TouchableOpacity>
     )
@@ -14,11 +14,19 @@ const ReminderItem = props => {
 const styles = StyleSheet.create({
     ReminderList: {
         padding: 10,
-        backgroundColor: '#ccc',
+        backgroundColor: 'white',
         marginVertical: 10,
         borderColor: 'black',
-        borderWidth: 1
-      }
+        borderWidth: 1,
+        width: 300,
+        alignItems: 'center',
+       
+    },
+    textLayout: {
+        fontSize: 20,
+        color: 'black'
+
+    }
 })
 
 export default ReminderItem;
