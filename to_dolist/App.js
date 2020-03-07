@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-import { StyleSheet, View, Button, FlatList, Alert, Image} from 'react-native';
+import { StyleSheet, View, Button, FlatList, Alert, Image, Text} from 'react-native';
 
 import ReminderItem from './components/ReminderItem';
 import ReminderInput from './components/ReminderInput';
 
 
+
 export default function App() {
   
   const [courseReminders, setCourseReminders] = useState([]);
-  const [newReminder, setnewReminder] = useState(false);  //change name newReminder n another
+  const [newReminder, setnewReminder] = useState(false);  
 
   
   const addReminderHandler = ReminderTitle => {    
@@ -40,7 +41,9 @@ if (ReminderTitle.length === 0) {
   return (
    
     <View style = {styles.mainScreen}>
-    
+      <View style = {styles.textView} >
+      <Text style={styles.textComponent}>To-Do List</Text>
+      </View>
       <Button title = "New Reminder" onPress= {() => setnewReminder(true)} />
        <ReminderInput 
        modalVisible={newReminder} 
@@ -61,6 +64,21 @@ if (ReminderTitle.length === 0) {
 
 const styles = StyleSheet.create({
   mainScreen: {
-    padding: 30
+    padding: 30,
+    backgroundColor: '#ccc',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    },
+  textComponent: {
+    fontWeight: 'bold',
+    color:'orange',
+    textAlign: 'center',
+    fontSize:50,
   },
+  textView: {
+    borderBottomWidth: 5,
+    backgroundColor: 'black'
+  }
+
 });
