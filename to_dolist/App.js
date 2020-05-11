@@ -6,6 +6,9 @@ import ReminderInput from './components/ReminderInput';
 
 
 
+
+
+//main exp
 export default function App() {
   
   const [courseReminders, setCourseReminders] = useState([]);
